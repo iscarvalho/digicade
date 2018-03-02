@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <title>Freelance</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="top-bar">
+      <a href="#" class="logo">Digicade</a>
+      <a href="#" class="user-actions">login@digicade.com.br</a>
+    </div>
+    <div class="left-bar">
+      <div class="cadastro" style="display: none">
+        <h2>Cadastro de Clientes</h2>
+        <form id="formClientes" onsubmit="return false;">
+          <label>Nome:</label>
+          <input type="text" name="nome" id="nome" placeholder="Nome">
+
+          <label>CPF/CNPJ:</label>
+          <input type="text" name="cpfcnpj" id="cpfcnpj" placeholder="CPF/CNPJ">
+
+          <label>Latitude:</label>
+          <input type="number" name="latitude" id="latitude" oninvalid="return false" placeholder="Latitude">
+
+          <label>Longitude:</label>
+          <input type="number" name="longitude" id="longitude" oninvalid="return false" placeholder="Longitude">
+
+          <label>Telefone:</label>
+          <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+
+          <label>Email:</label>
+          <input type="text" name="email" id="email" placeholder="Email">
+          <div class="actions">
+            <button type="submit" class="save" onclick="addClient()">Salvar</button>
+            <button class="cancel">Cancelar</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="listagem">
+        <h2>Lista de clientes</h2>
+        <a href="#" class="btn-add-client">Novo Cliente</a>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsSvYK0xC_CXI1oIUS24NvIgfc2VPpLGA&callback=initMap">
+    </script>
+    <div id="map"></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

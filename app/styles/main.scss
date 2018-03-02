@@ -1,0 +1,164 @@
+// Colors
+$white: #fff;
+$black: #000;
+$red: #a11d29;
+
+body {
+  background: #fafafa;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+* {
+  outline: none;
+}
+#map {
+  width: 100%;
+  height: 94vh;
+  background-color: grey;
+}
+
+.top-bar {
+  display: block;
+  height: 54px;
+  width: 100%;
+  background: $red;
+  postion: fixed;
+  top: 0;
+  left: 0;
+  .logo {
+    display: block;
+    width: 100px;
+    height: 36px;
+    margin: 14.5px 0 0 15px;
+    float: left;
+  }
+  .user-actions {
+    display: block;
+    float: right;
+    font-size: 12px;
+    color: #FFF;
+    margin: 14.5px 15px 0 0;
+  }
+}
+
+.left-bar {
+  display: block;
+  width: 340px;
+  height: 94vh;
+  background: $white;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    width: 100%;
+  }
+  h2 {
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  a.btn-add-client {
+    float: right;
+    margin-top: -56px;
+    font-size: 14px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #79d1ff;
+  }
+  label {
+    width: 300px;
+    margin: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      width: 90%;
+      margin: 10px 35px;
+    }
+  }
+  input {
+    display: block;
+    border: none;
+    background: none;
+    width: 300px;
+    margin: 10px 20px;
+    border-bottom: 1px solid #cccccc;
+    box-sizing: border-box;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 300;
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }
+  .actions {
+    background: #f1f1f1;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #b7b7b7;
+    margin-top: 23px;
+    button {
+      display: block;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 2px;
+      background: #337ab7;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0px 2px 2px 0px rgba(143,143,143,1);
+      -moz-box-shadow: 0px 2px 2px 0px rgba(143,143,143,1);
+      box-shadow: 0px 2px 2px 0px rgba(143,143,143,1);
+      &.save {
+        float: right;
+        color: #FFF;
+        margin-right: 20px;
+        @media only screen and (min-width: 320px) and (max-width: 768px) {
+          margin-right: 35px;
+        }
+      }
+      &.cancel {
+        float: left;
+        color: #333333;
+        background: $white;
+        margin-left: 20px;
+        @media only screen and (min-width: 320px) and (max-width: 768px) {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}
+.listagem {
+  table {
+    margin: 10px 20px;
+    border: none;
+    border-collapse: collapse;
+    tr {
+      th {
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        padding: 10px;
+      }
+      td {
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+        background: #f9f9f9;
+        padding: 10px;
+      }
+      &:nth-child(even) {
+        td {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
